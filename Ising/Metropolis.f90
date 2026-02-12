@@ -6,8 +6,8 @@
 !--------------------------------------------------------------------------------------------!
 
 !NOTE: compile with:
-! gfortran -O3 -march=native -flto rng_wrapper.o Ising_Metropolis.f90 -L. -lRANLUX++ -lranluxpp_c -Wl,-rpath='$ORIGIN' -o Metropolis
-!NOTE: run and call python3 show.py
+! gfortran -O3 -march=native -flto rng_wrapper.o Metropolis.f90 -L. -lRANLUX++ -lranluxpp_c -Wl,-rpath='$ORIGIN' -o Metropolis
+!NOTE: run and call python3 show.py to visualize results
 !NOTE: make sure to give an integer in CLI for program to initialize
 !NOTE: gets <|m|> and NOT <m>
 !NOTE: To speed up computations, this program doesn't calculate the errors of E, M, C or X, because it is meant 
