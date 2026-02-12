@@ -438,7 +438,7 @@ program main
   do k = 1, n_sizes
     print*, L
     rng = init_rng(seed*k + int_param) 
-    write(output,'(A,I0,A,I0,A,I0,A)') "M_EMCX_", L, "_", dim, "-", int_param, ".dat"  ! prefix M_ for Metropolis
+    write(output,'(A,I0,A,I0,A,I0,A)') "HB_EMCX_", L, "_", dim, "-", int_param, ".dat"  ! prefix M_ for Metropolis
     call vals%init_meas(L=L,N=mcs,burnin=burnin,lag=lag,Ti=Ti,Tf=Tf,dT=dT,TNC=TNC,nboot=nboot)
     call sample%init_sys(L=L,dim=dim,p=p,rng=rng)              ! ordered => p=1 (all 1) or p=0 (all -1) , random => p=0.5
     call sample%set_neighbors(1)                               ! needs agrument to be 1 to start recursion
@@ -459,7 +459,7 @@ program main
     close(io)
 
     ! FILE FOR SPATIAL CORRELATION
-    write(corr_output,'(A,I0,A,I0,A,I0,A)') "M_CORR_", L, "_", dim, "-", int_param, ".dat" 
+    write(corr_output,'(A,I0,A,I0,A,I0,A)') "HB_CORR_", L, "_", dim, "-", int_param, ".dat" 
     open(newunit=io, file=corr_output, action="write")  
       write(io,*) "# Compiler version = ", compiler_version()
       write(io,*) "# Compiler flags = ", compiler_options()
@@ -475,7 +475,7 @@ program main
     close(io)
 
     ! FILE FOR TEMPORAL CORRELATION
-    write(tcorr_output,'(A,I0,A,I0,A,I0,A)') "M_TCORR_", L, "_", dim, "-", int_param, ".dat" 
+    write(tcorr_output,'(A,I0,A,I0,A,I0,A)') "HB_TCORR_", L, "_", dim, "-", int_param, ".dat" 
     open(newunit=io, file=tcorr_output, action="write")  
       write(io,*) "# Compiler version = ", compiler_version()
       write(io,*) "# Compiler flags = ", compiler_options()
