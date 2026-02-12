@@ -292,8 +292,8 @@ contains
     real(dp), intent(in)               :: beta 
     type(rng_t), intent(in out)        :: rng
     integer, intent(in)                :: idx, int_param  ! idx is for indexing thermodynamic variables
-    real(dp)                           :: samples, mean_mt, mean_mtp, Et, Mt, Ct, Xt, bc     ! temporary variables
-    real(dp)                           :: re_C1, re_C2, re_X1, re_X2, C1, C2, X1, X2, rE, rm ! bootstrapping
+    real(dp)                           :: samples, mean_mt, mean_mtp, Et, Mt, Ct, Xt, bc, temp ! temporary variables
+    real(dp)                           :: re_C1, re_C2, re_X1, re_X2, C1, C2, X1, X2, rE, rm   ! bootstrapping
     integer                            :: i, j, k, dutemp, io
     character(len=100)                 :: mcresults
 
