@@ -3,6 +3,7 @@
 !               H = -J \sum_{<i,j>} \vec{S}_i \cdot \vec{S}_j                              !
 !                                                                                          !
 ! To modify parameters, change "clock_input.in".                                           !
+! (MUST use .FALSE. or .TRUE. in fortran input file and 0 or 1 in C++ input file)          !
 !------------------------------------------------------------------------------------------!
 
 ! COMPILE WITH:
