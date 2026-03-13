@@ -157,7 +157,7 @@ struct System {
         set_neighbors_recursive(0);
     }
 
-    // saves snapshot of system
+    // saves snapshot of system (only works for dim=2)
     void save_config(const std::string& output_file) {
         std::ofstream io(output_file);
         for (int i = 0; i < L; ++i) {
