@@ -161,8 +161,9 @@ struct System {
     void save_config(const std::string& output_file) {
         std::ofstream io(output_file);
         for (int i = 0; i < L; ++i) {
-            for (int j = 0; j < L; ++j) {
-                io << Status[i * L + j] << (j == L - 1 ? "" : "  ");
+            for (int j = 0; j < 2*L; j += 2) {
+                io << Status[i * 2 * L + j] << "  ";
+                io << Status[i * 2 * L + j + 1] << (j == L-1 ? "" : " ");
             }
             io << "\n";
         }
